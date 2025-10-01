@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Regular - 7:1482</title>
+  <title>Ocean Professional — Regular (7-1482)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="./common.css" rel="stylesheet">
   <link href="./regular.css" rel="stylesheet">
@@ -10,186 +10,187 @@
 <body>
   <main class="center-screen">
     <!-- Screen canvas with Figma frame size -->
-    <div class="screen-canvas" role="img" aria-label="Figma screen Regular (7:1482)">
+    <figure class="screen-canvas" role="group" aria-labelledby="screen-caption">
+      <figcaption id="screen-caption" class="visually-hidden">Figma screen: Regular, id 7:1482, showing light and dark calendar variants.</figcaption>
       <!-- Root frame - style_0 background color_adafb3 with radius 24 -->
-      <div class="frame-regular">
-        <!-- Light Mode card (x:1812, y:-5104 in Figma; we visually center within screen-canvas per layout description) -->
-        <section class="card light-mode" aria-label="Light Mode calendar">
+      <div class="frame-regular" role="presentation">
+        <!-- Light Mode card -->
+        <section class="card light-mode" aria-label="Calendar — Light Mode" role="region">
           <!-- Header -->
           <div class="header">
             <button class="nav-btn prev" aria-label="Previous month">
-              <span class="chev chev-left"></span>
+              <span class="chev chev-left" aria-hidden="true"></span>
             </button>
-            <div class="month-year">
-              <button class="month pill">
+            <div class="month-year" role="group" aria-label="Month and Year">
+              <button class="month pill" aria-haspopup="listbox" aria-expanded="false" aria-label="Select month: April">
                 <span class="month-text">April</span>
-                <span class="dd-icon"></span>
+                <span class="dd-icon" aria-hidden="true"></span>
               </button>
-              <button class="year pill">
+              <button class="year pill" aria-haspopup="listbox" aria-expanded="false" aria-label="Select year: 2021">
                 <span class="year-text">2021</span>
-                <span class="dd-icon"></span>
+                <span class="dd-icon" aria-hidden="true"></span>
               </button>
             </div>
             <button class="nav-btn next" aria-label="Next month">
-              <span class="chev chev-right"></span>
+              <span class="chev chev-right" aria-hidden="true"></span>
             </button>
           </div>
 
           <!-- Day of week -->
-          <div class="dow">
-            <div class="dow-cell"><span>Mo</span></div>
-            <div class="dow-cell"><span>Tu</span></div>
-            <div class="dow-cell"><span>We</span></div>
-            <div class="dow-cell"><span>Th</span></div>
-            <div class="dow-cell"><span>Fr</span></div>
-            <div class="dow-cell"><span>Sa</span></div>
-            <div class="dow-cell"><span>Su</span></div>
+          <div class="dow" role="row" aria-label="Days of week">
+            <div class="dow-cell" role="columnheader" aria-label="Monday"><span>Mo</span></div>
+            <div class="dow-cell" role="columnheader" aria-label="Tuesday"><span>Tu</span></div>
+            <div class="dow-cell" role="columnheader" aria-label="Wednesday"><span>We</span></div>
+            <div class="dow-cell" role="columnheader" aria-label="Thursday"><span>Th</span></div>
+            <div class="dow-cell" role="columnheader" aria-label="Friday"><span>Fr</span></div>
+            <div class="dow-cell" role="columnheader" aria-label="Saturday"><span>Sa</span></div>
+            <div class="dow-cell" role="columnheader" aria-label="Sunday"><span>Su</span></div>
           </div>
 
           <!-- Weeks -->
-          <div class="weeks">
+          <div class="weeks" role="grid" aria-label="April 2021">
             <!-- Week 1 -->
-            <div class="week">
-              <div class="day disabled"><span>29</span></div>
-              <div class="day disabled"><span>30</span></div>
-              <div class="day disabled"><span>31</span></div>
-              <div class="day regular"><span>1</span></div>
-              <div class="day regular"><span>2</span></div>
-              <div class="day regular"><span>3</span></div>
-              <div class="day regular"><span>4</span></div>
+            <div class="week" role="row">
+              <div class="day disabled" role="gridcell" aria-disabled="true" aria-label="March 29"><span>29</span></div>
+              <div class="day disabled" role="gridcell" aria-disabled="true" aria-label="March 30"><span>30</span></div>
+              <div class="day disabled" role="gridcell" aria-disabled="true" aria-label="March 31"><span>31</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 1"><span>1</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 2"><span>2</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 3"><span>3</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 4"><span>4</span></div>
             </div>
             <!-- Week 2 -->
-            <div class="week">
-              <div class="day regular"><span>5</span></div>
-              <div class="day regular"><span>6</span></div>
-              <div class="day today"><span>7</span></div>
-              <div class="day regular"><span>8</span></div>
-              <div class="day regular"><span>9</span></div>
-              <div class="day regular"><span>10</span></div>
-              <div class="day regular"><span>11</span></div>
+            <div class="week" role="row">
+              <div class="day regular" role="gridcell" aria-label="April 5"><span>5</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 6"><span>6</span></div>
+              <div class="day today" role="gridcell" aria-current="date" aria-label="April 7, today"><span>7</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 8"><span>8</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 9"><span>9</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 10"><span>10</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 11"><span>11</span></div>
             </div>
             <!-- Week 3 -->
-            <div class="week">
-              <div class="day regular"><span>12</span></div>
-              <div class="day regular"><span>13</span></div>
-              <div class="day regular"><span>14</span></div>
-              <div class="day regular"><span>15</span></div>
-              <div class="day regular"><span>0</span></div>
-              <div class="day regular"><span>17</span></div>
-              <div class="day regular"><span>18</span></div>
+            <div class="week" role="row">
+              <div class="day regular" role="gridcell" aria-label="April 12"><span>12</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 13"><span>13</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 14"><span>14</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 15"><span>15</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 16"><span>16</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 17"><span>17</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 18"><span>18</span></div>
             </div>
             <!-- Week 4 -->
-            <div class="week">
-              <div class="day regular"><span>19</span></div>
-              <div class="day regular"><span>20</span></div>
-              <div class="day regular"><span>21</span></div>
-              <div class="day regular"><span>22</span></div>
-              <div class="day regular"><span>23</span></div>
-              <div class="day regular"><span>24</span></div>
-              <div class="day regular"><span>25</span></div>
+            <div class="week" role="row">
+              <div class="day regular" role="gridcell" aria-label="April 19"><span>19</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 20"><span>20</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 21"><span>21</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 22"><span>22</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 23"><span>23</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 24"><span>24</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 25"><span>25</span></div>
             </div>
             <!-- Week 5 -->
-            <div class="week">
-              <div class="day regular"><span>26</span></div>
-              <div class="day regular"><span>27</span></div>
-              <div class="day regular"><span>28</span></div>
-              <div class="day regular"><span>29</span></div>
-              <div class="day regular"><span>30</span></div>
-              <div class="day disabled"><span>1</span></div>
-              <div class="day disabled"><span>2</span></div>
+            <div class="week" role="row">
+              <div class="day regular" role="gridcell" aria-label="April 26"><span>26</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 27"><span>27</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 28"><span>28</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 29"><span>29</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 30"><span>30</span></div>
+              <div class="day disabled" role="gridcell" aria-disabled="true" aria-label="May 1"><span>1</span></div>
+              <div class="day disabled" role="gridcell" aria-disabled="true" aria-label="May 2"><span>2</span></div>
             </div>
           </div>
         </section>
 
         <!-- Dark Mode card -->
-        <section class="card dark-mode" aria-label="Dark Mode calendar">
+        <section class="card dark-mode" aria-label="Calendar — Dark Mode" role="region">
           <!-- Header -->
           <div class="header">
             <button class="nav-btn prev" aria-label="Previous month">
-              <span class="chev chev-left"></span>
+              <span class="chev chev-left" aria-hidden="true"></span>
             </button>
-            <div class="month-year">
-              <button class="month pill">
+            <div class="month-year" role="group" aria-label="Month and Year">
+              <button class="month pill" aria-haspopup="listbox" aria-expanded="false" aria-label="Select month: April">
                 <span class="month-text">April</span>
-                <span class="dd-icon"></span>
+                <span class="dd-icon" aria-hidden="true"></span>
               </button>
-              <button class="year pill">
+              <button class="year pill" aria-haspopup="listbox" aria-expanded="false" aria-label="Select year: 2021">
                 <span class="year-text">2021</span>
-                <span class="dd-icon"></span>
+                <span class="dd-icon" aria-hidden="true"></span>
               </button>
             </div>
             <button class="nav-btn next" aria-label="Next month">
-              <span class="chev chev-right"></span>
+              <span class="chev chev-right" aria-hidden="true"></span>
             </button>
           </div>
 
           <!-- Day of week -->
-          <div class="dow">
-            <div class="dow-cell"><span>Mo</span></div>
-            <div class="dow-cell"><span>Tu</span></div>
-            <div class="dow-cell"><span>We</span></div>
-            <div class="dow-cell"><span>Th</span></div>
-            <div class="dow-cell"><span>Fr</span></div>
-            <div class="dow-cell"><span>Sa</span></div>
-            <div class="dow-cell"><span>Su</span></div>
+          <div class="dow" role="row" aria-label="Days of week">
+            <div class="dow-cell" role="columnheader" aria-label="Monday"><span>Mo</span></div>
+            <div class="dow-cell" role="columnheader" aria-label="Tuesday"><span>Tu</span></div>
+            <div class="dow-cell" role="columnheader" aria-label="Wednesday"><span>We</span></div>
+            <div class="dow-cell" role="columnheader" aria-label="Thursday"><span>Th</span></div>
+            <div class="dow-cell" role="columnheader" aria-label="Friday"><span>Fr</span></div>
+            <div class="dow-cell" role="columnheader" aria-label="Saturday"><span>Sa</span></div>
+            <div class="dow-cell" role="columnheader" aria-label="Sunday"><span>Su</span></div>
           </div>
 
           <!-- Weeks -->
-          <div class="weeks">
+          <div class="weeks" role="grid" aria-label="April 2021">
             <!-- Week 1 -->
-            <div class="week">
-              <div class="day disabled"><span>29</span></div>
-              <div class="day disabled"><span>30</span></div>
-              <div class="day disabled"><span>31</span></div>
-              <div class="day regular"><span>1</span></div>
-              <div class="day regular"><span>2</span></div>
-              <div class="day regular"><span>3</span></div>
-              <div class="day regular"><span>4</span></div>
+            <div class="week" role="row">
+              <div class="day disabled" role="gridcell" aria-disabled="true" aria-label="March 29"><span>29</span></div>
+              <div class="day disabled" role="gridcell" aria-disabled="true" aria-label="March 30"><span>30</span></div>
+              <div class="day disabled" role="gridcell" aria-disabled="true" aria-label="March 31"><span>31</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 1"><span>1</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 2"><span>2</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 3"><span>3</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 4"><span>4</span></div>
             </div>
             <!-- Week 2 -->
-            <div class="week">
-              <div class="day regular"><span>5</span></div>
-              <div class="day regular"><span>6</span></div>
-              <div class="day today"><span>7</span></div>
-              <div class="day regular"><span>8</span></div>
-              <div class="day regular"><span>9</span></div>
-              <div class="day regular"><span>10</span></div>
-              <div class="day regular"><span>11</span></div>
+            <div class="week" role="row">
+              <div class="day regular" role="gridcell" aria-label="April 5"><span>5</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 6"><span>6</span></div>
+              <div class="day today" role="gridcell" aria-current="date" aria-label="April 7, today"><span>7</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 8"><span>8</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 9"><span>9</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 10"><span>10</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 11"><span>11</span></div>
             </div>
             <!-- Week 3 -->
-            <div class="week">
-              <div class="day regular"><span>12</span></div>
-              <div class="day regular"><span>13</span></div>
-              <div class="day regular"><span>14</span></div>
-              <div class="day regular"><span>15</span></div>
-              <div class="day regular"><span>0</span></div>
-              <div class="day regular"><span>17</span></div>
-              <div class="day regular"><span>18</span></div>
+            <div class="week" role="row">
+              <div class="day regular" role="gridcell" aria-label="April 12"><span>12</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 13"><span>13</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 14"><span>14</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 15"><span>15</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 16"><span>16</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 17"><span>17</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 18"><span>18</span></div>
             </div>
             <!-- Week 4 -->
-            <div class="week">
-              <div class="day regular"><span>19</span></div>
-              <div class="day regular"><span>20</span></div>
-              <div class="day regular"><span>21</span></div>
-              <div class="day regular"><span>22</span></div>
-              <div class="day regular"><span>23</span></div>
-              <div class="day regular"><span>24</span></div>
-              <div class="day regular"><span>25</span></div>
+            <div class="week" role="row">
+              <div class="day regular" role="gridcell" aria-label="April 19"><span>19</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 20"><span>20</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 21"><span>21</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 22"><span>22</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 23"><span>23</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 24"><span>24</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 25"><span>25</span></div>
             </div>
             <!-- Week 5 -->
-            <div class="week">
-              <div class="day regular"><span>26</span></div>
-              <div class="day regular"><span>27</span></div>
-              <div class="day regular"><span>28</span></div>
-              <div class="day regular"><span>29</span></div>
-              <div class="day regular"><span>30</span></div>
-              <div class="day disabled"><span>1</span></div>
-              <div class="day disabled"><span>2</span></div>
+            <div class="week" role="row">
+              <div class="day regular" role="gridcell" aria-label="April 26"><span>26</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 27"><span>27</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 28"><span>28</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 29"><span>29</span></div>
+              <div class="day regular" role="gridcell" aria-label="April 30"><span>30</span></div>
+              <div class="day disabled" role="gridcell" aria-disabled="true" aria-label="May 1"><span>1</span></div>
+              <div class="day disabled" role="gridcell" aria-disabled="true" aria-label="May 2"><span>2</span></div>
             </div>
           </div>
         </section>
       </div>
-    </div>
+    </figure>
   </main>
   <script src="./app.js"></script>
 </body>
