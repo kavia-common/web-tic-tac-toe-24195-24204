@@ -1,0 +1,388 @@
+:root {
+  /* Typography mappings used on this screen */
+  --typo-dow-size: 18px;          /* typo_21/18 */
+  --typo-dow-weight: 500;
+  --typo-dow-line: 18px;
+  --typo-dow-color: var(--fig-color-1f1f1f);  /* light mode DoW */
+
+  --typo-day-regular-size: 18px;  /* typo_19/18 (light regular day text uses #ebebeb on dark; light uses #1f1f1f) */
+  --typo-day-regular-weight: 500;
+  --typo-day-regular-line: 18px;
+
+  --typo-day-disabled-color-light: var(--fig-color-001754); /* typo_22 for light disabled */
+  --typo-day-disabled-color-dark: rgba(255,255,255,0.20);  /* style_10 opacity text on dark */
+
+  --typo-month-size: 24px;        /* typo_20 */
+  --typo-month-weight: 700;
+  --typo-month-line: 24px;
+  --typo-month-color: var(--fig-color-141414);
+
+  --typo-year-size: 24px;         /* same as month */
+  --typo-year-weight: 700;
+  --typo-year-line: 24px;
+  --typo-year-color: var(--fig-color-141414);
+
+  /* Sizes from frame/components */
+  --frame-width: 1200px;
+  --frame-height: 800px;
+
+  /* Card container size (Light/Dark Mode frames) */
+  --card-w: 426px;
+  --card-h: 396px;
+  --card-radius: 16px; /* style_79/style_75 */
+
+  /* Header height */
+  --header-h: 44px;
+
+  /* Cell dimensions */
+  --cell-w: 54px;
+  --cell-h: 44px;
+  --pill-radius: 6px; /* style_81/style_77 */
+  --pill-shadow: var(--shadow-1);
+
+  /* Borders */
+  --border-thin: 0.5px;
+  --border-color-light: var(--fig-color-e5e5e5);
+  --border-color-today: var(--fig-color-ffffff);
+
+  /* Ocean theme enhancement */
+  --ocean-accent: var(--color-primary);
+  --ocean-amber: var(--color-secondary);
+}
+
+/* Screen canvas centers the Figma frame visually with theme gradient background (common.css) */
+.screen-canvas {
+  width: var(--frame-width);
+  height: var(--frame-height);
+  position: relative;
+  border-radius: 24px; /* style_0 */
+  background: var(--fig-color-adafb3);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,14,51,0.2);
+}
+
+/* Root frame container aligns two cards side-by-side similar to design positions */
+.frame-regular {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 64px;
+  padding: 32px;
+}
+
+/* Card base */
+.card {
+  width: var(--card-w);
+  height: var(--card-h);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Light Mode card (style_79: bg #f5f5f5, radius 16, shadow_0) */
+.card.light-mode {
+  background: var(--fig-color-f5f5f5);
+  box-shadow: var(--shadow-0);
+}
+
+/* Dark Mode card (style_75: bg #1d1d1f, radius 16, shadow_0) */
+.card.dark-mode {
+  background: var(--fig-color-1d1d1f);
+  box-shadow: var(--shadow-0);
+}
+
+/* Header */
+.header {
+  height: var(--header-h);
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  padding: 0 24px;
+}
+
+/* Nav circular buttons (44x44, radius 80, style_80 or style_76 variants) */
+.nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 80px;
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow-1);
+}
+
+/* Light vs Dark button backgrounds */
+.light-mode .nav-btn {
+  background: var(--fig-color-ffffff);
+}
+.dark-mode .nav-btn {
+  background: var(--fig-color-262629);
+}
+
+/* Chevron visuals (simplified vectors, matching direction and visibility) */
+.chev {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  position: relative;
+}
+.chev::before,
+.chev::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  width: 2px;
+  height: 8px;
+  background: var(--fig-color-000000);
+  transform-origin: bottom;
+}
+.chev-left::before { transform: rotate(45deg); top: 2px; }
+.chev-left::after { transform: rotate(-45deg); top: 8px; }
+.chev-right::before { transform: rotate(-45deg); top: 2px; }
+.chev-right::after { transform: rotate(45deg); top: 8px; }
+
+/* Month-Year pill group */
+.month-year {
+  height: 44px;
+  display: grid;
+  grid-template-columns: 93px 12px 90px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  justify-items: center;
+}
+
+/* Month and Year pill buttons (style_81/77) */
+.pill {
+  height: 44px;
+  border-radius: var(--pill-radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  gap: 8px;
+  box-shadow: var(--pill-shadow);
+}
+
+/* Light mode pill bg white; dark mode pill bg #262629 */
+.light-mode .pill { background: var(--fig-color-ffffff); }
+.dark-mode .pill { background: var(--fig-color-262629); }
+
+/* Month text (typo_20 in light mode) */
+.light-mode .month-text {
+  font-family: var(--font-family-lexend);
+  font-size: var(--typo-month-size);
+  font-weight: var(--typo-month-weight);
+  line-height: var(--typo-month-line);
+  letter-spacing: -0.24px;
+  color: var(--typo-month-color);
+}
+
+/* Month text in dark mode uses typo_17 color (#f5f5f5) centered */
+.dark-mode .month-text {
+  font-family: var(--font-family-lexend);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+  color: var(--fig-color-f5f5f5);
+}
+
+/* Year text: light mode typo_20 color #141414; dark mode #f5f5f5 */
+.light-mode .year-text {
+  font-family: var(--font-family-lexend);
+  font-size: var(--typo-year-size);
+  font-weight: var(--typo-year-weight);
+  line-height: var(--typo-year-line);
+  letter-spacing: -0.24px;
+  color: var(--typo-year-color);
+}
+.dark-mode .year-text {
+  font-family: var(--font-family-lexend);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+  color: var(--fig-color-f5f5f5);
+}
+
+/* Dropdown icon (8x8 inside 8x24 area) */
+.dd-icon {
+  width: 8px;
+  height: 8px;
+  background: var(--fig-color-0047ff);
+  clip-path: polygon(0% 30%, 50% 100%, 100% 30%, 80% 10%, 50% 60%, 20% 10%);
+}
+
+/* Day of week row (7 cells) */
+.dow {
+  height: 44px;
+  display: grid;
+  grid-template-columns: repeat(7, var(--cell-w));
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+/* DoW cell text */
+.light-mode .dow-cell span {
+  font-family: var(--font-family-lexend);
+  font-size: var(--typo-dow-size);
+  font-weight: var(--typo-dow-weight);
+  line-height: var(--typo-dow-line);
+  color: var(--fig-color-1f1f1f); /* typo_21 */
+}
+.dark-mode .dow-cell span {
+  font-family: var(--font-family-lexend);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  color: rgba(255,255,255,0.20); /* style_10 opacity */
+}
+
+/* Weeks container: 5 rows of 44px height, each with 7 cells */
+.weeks {
+  display: grid;
+  grid-template-rows: repeat(5, var(--cell-h));
+  gap: 0;
+  padding-top: 8px;
+}
+
+/* Each week is a 7-column grid */
+.week {
+  height: var(--cell-h);
+  display: grid;
+  grid-template-columns: repeat(7, var(--cell-w));
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Day cell variants */
+/* Base day cell holds an inner 50x44 frame with borders depending on state; we emulate with padding and inner box */
+.day {
+  width: var(--cell-w);
+  height: var(--cell-h);
+  display: grid;
+  place-items: center;
+}
+.day > span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Inner frame styling per state */
+.day.regular::before,
+.day.disabled::before,
+.day.today::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 44px;
+  border-radius: 6px; /* style_78/style_11 */
+}
+
+/* Regular day (style_78: bg #262629, border 0.5 #e5e5e5, shadow_1) in Light Mode it's a white surface with thin border */
+.light-mode .day.regular::before {
+  background: var(--fig-color-ffffff);
+  border: var(--border-thin) solid var(--border-color-light);
+  box-shadow: var(--shadow-1);
+}
+.dark-mode .day.regular::before {
+  background: var(--fig-color-262629);
+  border: var(--border-thin) solid var(--fig-color-e5e5e5);
+  box-shadow: var(--shadow-1);
+}
+
+/* Disabled day (style_11 radius only with transparent bg and 10% white text look on dark; light uses blue-ish text) */
+.light-mode .day.disabled::before {
+  background: transparent;
+}
+.dark-mode .day.disabled::before {
+  background: transparent;
+}
+.light-mode .day.disabled span {
+  font-family: var(--font-family-lexend);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--fig-color-001754); /* typo_22 */
+}
+.dark-mode .day.disabled span {
+  color: rgba(255,255,255,0.10); /* style_12 10% */
+}
+
+/* Today selected (style_14: bg #0047ff, border 2px #ffffff, radius 6, text white) */
+.day.today::before {
+  background: var(--fig-color-0047ff);
+  border: 2px solid var(--border-color-today);
+  box-shadow: 0 3px 2px var(--fig-color-0047ff), 0 1.5px 1px #001f70; /* shadow_2, shadow_3 */
+}
+.day.today span {
+  font-family: var(--font-family-lexend);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--fig-color-ffffff);
+}
+
+/* Regular day numbers text color */
+.light-mode .day.regular span {
+  font-family: var(--font-family-lexend);
+  font-size: var(--typo-day-regular-size);
+  font-weight: var(--typo-day-regular-weight);
+  line-height: var(--typo-day-regular-line);
+  color: var(--fig-color-1f1f1f);
+}
+.dark-mode .day.regular span {
+  font-family: var(--font-family-lexend);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--fig-color-ebebeb); /* typo_19 for dark */
+}
+
+/* Ocean theme subtle polish: hover/focus styles */
+.pill, .nav-btn, .day {
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease, color 160ms ease;
+}
+.pill:hover, .nav-btn:hover {
+  transform: translateY(-1px);
+}
+.day.regular:hover::before {
+  background: linear-gradient(0deg, rgba(37,99,235,0.06), rgba(37,99,235,0.06)), var(--fig-color-ffffff);
+}
+.dark-mode .day.regular:hover::before {
+  background: linear-gradient(0deg, rgba(37,99,235,0.10), rgba(37,99,235,0.10)), var(--fig-color-262629);
+}
+
+/* Accessibility: only show outlines when keyboard tabbing (managed by app.js) */
+.user-is-tabbing .pill:focus,
+.user-is-tabbing .nav-btn:focus,
+.user-is-tabbing .day:focus-within {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Responsive behavior: keep integrity; scale down grid if viewport is smaller than frame */
+@media (max-width: 1280px) {
+  .screen-canvas {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+}
+@media (max-width: 1024px) {
+  .frame-regular {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .screen-canvas {
+    height: calc(var(--frame-height) + 32px);
+  }
+}
